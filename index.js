@@ -312,7 +312,7 @@ function tinf_inflate_uncompressed_block(d) {
 }
 
 /* inflate stream from source to dest */
-function tinf_uncompress(source, dest) {
+export function tinf_uncompress(source, dest) {
   var d = new Data(source, dest);
   var bfinal, btype, res;
 
@@ -371,5 +371,3 @@ tinf_build_bits_base(dist_bits, dist_base, 2, 1);
 /* fix a special case */
 length_bits[28] = 0;
 length_base[28] = 258;
-
-module.exports = tinf_uncompress;
