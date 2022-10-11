@@ -6,10 +6,6 @@ Minified it is about 3KB, or 1.3KB gzipped. While being very small, it is also r
 good enough for many applications. If you need the absolute best performance, however, you'll
 need to use a larger library such as pako that contains additional optimizations.
 
-## Installation
-
-    npm install tiny-inflate
-
 ## Example
 
 To use tiny-inflate, you need two things: a buffer of data compressed with deflate,
@@ -17,7 +13,7 @@ and the decompressed size (often stored in a file header) to allocate your outpu
 Input and output buffers can be either node `Buffer`s, or `Uint8Array`s.
 
 ```javascript
-var inflate = require('tiny-inflate');
+import { tinf_uncompress as inflate } from "https://code4fukui.github.io/tiny-inflate-es/tinf_uncompress.js";
 
 var compressedBuffer = new Bufer([ ... ]);
 var decompressedSize = ...;
